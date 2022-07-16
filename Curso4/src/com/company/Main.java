@@ -5,10 +5,23 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+ 
         condicionalesEx1();
         condicionalesEx2();
         condicionalesEx3();
         interactivosEx1();
+        interactivosEx2();
+    }
+
+    private static void interactivosEx2() {
+        int i=0;
+        imprimirSec(i);
+    }
+
+    private static void imprimirSec(int i) {
+        for(i=1; i<11; i++){
+            System.out.print(" "+ i +" ");
+        }
     }
 
     private static void interactivosEx1() {
