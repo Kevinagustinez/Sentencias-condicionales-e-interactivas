@@ -5,13 +5,46 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    
-        condicionalesEx1();
-        condicionalesEx2();
-        condicionalesEx3();
-        interactivosEx1();
-        interactivosEx2();
-        interactivosEx3();
+        System.out.println("Bienvenido al menu de ejercicios.");
+        System.out.println(" ");
+        System.out.println("Seleccione una opcion: ");
+        System.out.println("1) Ejercicio de condicionales 1");
+        System.out.println("2) Ejercicio de condicionales 2");
+        System.out.println("3) Ejercicio de condicionales 3");
+        System.out.println("4) Ejercicio de interactivos 1");
+        System.out.println("5) Ejercicio de interactivos 2");
+        System.out.println("6) Ejercicio de interactivos 3");
+        System.out.println("7) Salir del programa");
+
+        Scanner in= new Scanner(System.in);
+        int option=0;
+        while (option != 7){
+            if (option ==1){
+                condicionalesEx1();
+            }else if(option ==2){
+                condicionalesEx2();
+            }else if (option ==3){
+                condicionalesEx3();
+            }else if (option ==4) {
+                interactivosEx1();
+            }else if(option ==5){
+                interactivosEx2();
+            }else if(option==6){
+                interactivosEx3();
+            }else{
+                System.out.println("Seleccione una opcion valida");
+            }
+            System.out.println(" ");
+            System.out.println("Seleccione una opcion: ");
+            System.out.println("1) Ejercicio de condicionales 1");
+            System.out.println("2) Ejercicio de condicionales 2");
+            System.out.println("3) Ejercicio de condicionales 3");
+            System.out.println("4) Ejercicio de interactivos 1");
+            System.out.println("5) Ejercicio de interactivos 2");
+            System.out.println("6) Ejercicio de interactivos 3");
+            System.out.println("7) Salir del programa");
+            option=in.nextInt();
+        }
     }
 
     private static void interactivosEx3() {
