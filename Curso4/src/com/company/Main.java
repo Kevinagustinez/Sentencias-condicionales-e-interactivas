@@ -5,36 +5,49 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double Matematicas = 0d;
-        double Biologia = 0d;
-        double Quimica = 0d;
+        condicionalesEx3();
+    }
+
+    private static void condicionalesEx3() {
         double promedio = 0d;
         Scanner in = new Scanner(System.in);
-        String nombre = "";
+        String nombre= ingresarNombre(in,"Ingrese el nombre del alumno: ");
+        double Matematicas=notaMatematicas(in,"¿Cual es la nota en la materia Matematicas?: ");
+        double Biologia= notaBiologia(in,"¿Cual es la nota en la materia Biologia?: ");
+        double Quimica=notaQuimica(in,"¿Cual es la nota en la materia Quimica?: ");
+        notasPromedio(nombre,Matematicas,Biologia,Quimica, promedio);
+    }
 
+    private static double notaQuimica(Scanner in, String s) {
+        System.out.println(s);
+        return in.nextDouble();
+    }
 
-        System.out.println("¿Cual es el nombre del alumno?");
-        nombre = in.nextLine();
+    private static double notaBiologia(Scanner in, String s) {
+        System.out.println(s);
+        return in.nextDouble();
+    }
 
-        System.out.println("¿Cual es la nota en la materia Matematicas?");
-        Matematicas=in.nextInt();
+    private static double notaMatematicas(Scanner in, String s) {
+        System.out.println(s);
+        return in.nextDouble();
+    }
 
-        System.out.println("¿Cual es la nota en Biologia?");
-        Biologia= in.nextInt();
+    private static String ingresarNombre(Scanner in, String s) {
+        System.out.println(s);
+        return in.nextLine();
+    }
 
-        System.out.println("¿Cual es la nota en la materia Quimica?");
-        Quimica=in.nextInt();
-
-        promedio = (Matematicas + Biologia + Quimica) / 3;
-
+    private static void notasPromedio(String nombre, double biologia, double quimica, double promedio, double matematicas) {
+        promedio = (matematicas + biologia + quimica) / 3;
 
         if (promedio >= 6 && promedio < 9) {
             System.out.println("El alumno " + nombre + " aprobo con un promedio de " + promedio);
-
         } else if (promedio >= 1 && promedio < 6) {
             System.out.println("El alumno " + nombre + " desaprobo con un promedio de " + promedio);
         } else if (promedio >=9 && promedio <=10) {
             System.out.println("El alumno " + nombre + " promociono con un promedio de " + promedio);
+
         }
     }
 }
